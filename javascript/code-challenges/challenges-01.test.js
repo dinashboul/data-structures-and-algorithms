@@ -157,7 +157,7 @@ const fizzbuzz = (arr) => {
   arr.forEach(element => {
     if(element %3===0 && element %5===0) { Array.push('Fizz Buzz');}
     else if (element %3===0) { Array.push('Fizz');}
-    else if (element %5===0)  {Array.push('Buzz');}
+    else if (element %5===0) {Array.push('Buzz');}
     else { Array.push(element);}
   });
   return Array;

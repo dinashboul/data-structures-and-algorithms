@@ -1,7 +1,5 @@
 'use strict';
 
-const { index } = require("cheerio/lib/api/traversing");
-
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 1
 

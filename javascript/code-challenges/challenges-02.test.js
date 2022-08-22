@@ -38,6 +38,7 @@ uses map to return a new array containing each string followed by a question mar
 const addQuestion = (arr) => {
   // Solution code here...
   let newArr = arr.map((string) => {
+    //string
     return string+'?';
   });
   return newArr;

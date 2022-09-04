@@ -92,15 +92,19 @@ For example, [ [0,2,5,4], [2,4,10], [] ] should return [ [1, 32], [1024], [] ].
 
 const divisibleByFiveTwoToThePower = (input) => {
   // Solution code here...
+  
 };
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 5
 
-Write a function named findMaleAndFemale that, given the Star Wars data, below,
-returns the names of the characters whose gender is either male or female.
+Write a function named findMaleAndFemale that, 
+given the Star Wars data, below,
+returns the names of the characters whose 
+gender is either male or female.
 
-The names should be combined into a single string with each character name separated by "and".
+The names should be combined into a single 
+string with each character name separated by "and".
 
 For example, "C-3PO and Luke Skywalker".
 ------------------------------------------------------------------------------------------------ */
@@ -158,16 +162,20 @@ let starWarsData = [{
 
 let findMaleAndFemale = (data) => {
   // Solution code here...
-};
-
+  
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 6
 
-Write a function named findShortest that, given the Star Wars data from Challenge 6, uses any combination of filter, map and reduce to return the name of the character who is the shortest in height.
+Write a function named findShortest that,
+ given the Star Wars data from Challenge 6,
+  uses any combination of filter, map and 
+  reduce to return the name of the character who
+   is the shortest in height.
 ------------------------------------------------------------------------------------------------ */
 
 let findShortest = (data) => {
   // Solution code here...
+ 
 };
 
 /* ------------------------------------------------------------------------------------------------

@@ -68,7 +68,8 @@ CHALLENGE 5
 
 Write a function named validateEmail that takes in an email address and validates it based
 on several rules:
-  - one word, or two words separated by a period, before the @ symbol
+  - one word, or two words separated by a period, 
+  before the @ symbol
   - can contain numbers
   - can have any of the following top-level domains: .net, .com, or .org
   - no other special characters
@@ -76,11 +77,16 @@ on several rules:
 
 Return either true or false.
 
-Note: if you ever need to validate an email using a regex in practice, the Internet has the actual regex you should use. It's many many lines long.
+Note: if you ever need to 
+validate an email using a regex in practice,
+ the Internet has the actual regex you should use. 
+ It's many many lines long.
 ------------------------------------------------------------------------------------------------ */
 
 const validateEmail = (email) => {
   // Solution code here...
+  const regix=/^(\w+).(\w+)(@)(\w+)(.com|.net|.org)$/ig;
+  return regix.test(email);
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -99,14 +105,23 @@ Acceptable formats include:
  - 555555-5555
  - 5555555555
 
-Your function should include a single regular expression pattern that matches any of these formats.
+Your function should
+ include a single regular
+  expression pattern that matches any of these formats.
 
 Return either true or false.
 ------------------------------------------------------------------------------------------------ */
 
 const validatePhoneNumber = (phoneNumber) => {
   // Solution code here...
+ 
+
+  
+  // Solution code here...
+  
+
 };
+
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 7 - Stretch Goal

@@ -143,6 +143,11 @@ This data could be sorted by name or price.
 
 const sortBy = (property, arr) => {
   // Solution code here...
+  let newArr= arr.sort((a,b)=>{
+    if (a[property]>b[property]) return 1;
+    else return -1;
+  });
+  return newArr;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -159,18 +164,32 @@ https:/missingslash.org returns false because the URL is malformed
 ------------------------------------------------------------------------------------------------ */
 const isSecure = (url) => {
   // Solution code here...
+  let regex = /^https:\/\//;
+  return regex.test(url);
 };
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 6 
 
-Write a function named detectTicTacToeWin that accepts a two-dimensional array of strings. Each string is guaranteed to be either "X", "O" or an empty string. Your function should check to see if any row, column, or either diagonal direction has three matching "X" or "O" symbols (non-empty strings), three-in-a-line.
+Write a function named detectTicTacToeWin that accepts a 
+two-dimensional array of strings. Each string is guaranteed 
+to be either "X", "O" or an empty string. Your function 
+should check to see if any row, column, or 
+either diagonal direction has three matching "X" or 
+"O" symbols (non-empty strings), three-in-a-line.
 
-This function should return either true or false to indicate if someone won the game.
+This function should return either true or false 
+to indicate if someone won the game.
 
-Instead of trying to write crazy for loops to automate checking the rows, columns and diagonals consider writing one helper function that accepts three coordinate pairs and checks the values of the array at those locations. For instance helpCheck(row1, col1, row2, col2, row3, col3).
+Instead of trying to write crazy for loops 
+to automate checking the rows, columns and 
+diagonals consider writing one helper function that 
+accepts three coordinate pairs and checks the values 
+of the array at those locations. For instance 
+helpCheck(row1, col1, row2, col2, row3, col3).
 
-Your function does not need to work for boards of any size other than 3x3.
+Your function does not need 
+to work for boards of any size other than 3x3.
 
 Here is a sample board:
 [
@@ -182,6 +201,32 @@ Here is a sample board:
 
 const detectTicTacToeWin = (board) => {
   // Solution code here...
+  let player = false;
+  let row1 = board[0];
+  let row2 = board[1];
+  let row3 = board[2];
+  let col1 = [board[0][0], board[1][0], board[2][0]];
+  let col2 = [board[0][1], board[1][1], board[2][1]];
+  let col3 = [board[0][2], board[1][2], board[2][2]];
+  let diag1 = [board[0][0], board[1][1], board[2][2]];
+  let diag2 = [board[0][2], board[1][1], board[2][0]];
+
+  let check = (item) => {
+    if (item[0] === item[1] && item[1] === item[2] && item[0] !== '') {
+      player = true;
+    }
+  };
+
+  check(row1);
+  check(row2);
+  check(row3);
+  check(col1);
+  check(col2);
+  check(col3);
+  check(diag1);
+  check(diag2);
+
+  return player;
 };
 
 /* ------------------------------------------------------------------------------------------------
